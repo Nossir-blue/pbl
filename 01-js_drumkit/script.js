@@ -5,7 +5,6 @@ function playSound(e) {
     audio.currentTime = 0;
     audio.play();
     key.classList.add('playing');
-    
 }
 
 function removeTransition(e){
@@ -14,6 +13,6 @@ function removeTransition(e){
 }
 
 const keys = document.querySelectorAll('.key');
-keys.forEach(key=>key.addEventListener('transitionend', removeTransition))
+keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
-window.addEventListener('keyup', playSound);
+window.addEventListener('keydown', playSound);
